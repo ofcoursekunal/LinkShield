@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Smart Link Shield",
+    "version": "3.0",
+    "description": "ML URL Firewall + Runtime Page Security Monitor",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["page-check.js"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
